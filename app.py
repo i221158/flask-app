@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+#unused import
+import os
 app= Flask(__name__)
 @app.route('/')
 def home():
@@ -8,7 +10,8 @@ def home():
 def about():
     return render_template("about.html")
 
-def  bad_func ():
-    print("this will pass flake8 test :)")
+def bad_func():
+    print("This line is wayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy too long for flake8 to accept")
+
 if __name__ == "__main__":
     app.run(debug=True)
